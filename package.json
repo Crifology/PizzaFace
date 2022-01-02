@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "express": "^4.17.2",
+    "express-app": "^0.0.9",
     "kaboom": "^2000.1.8"
   },
   "name": "pizzaface",
@@ -9,7 +10,6 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "start"
   },
   "repository": {
     "type": "git",

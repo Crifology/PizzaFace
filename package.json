@@ -1,5 +1,24 @@
 {
   "dependencies": {
+    "express": "^4.17.2",
     "kaboom": "^2000.1.8"
-  }
+  },
+  "name": "pizzaface",
+  "description": "My Second Application Written Through VS Code!!\r Using Javascript with KABOOMJS",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Crifology/PizzaFace.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Crifology/PizzaFace/issues"
+  },
+  "homepage": "https://github.com/Crifology/PizzaFace#readme"
 }

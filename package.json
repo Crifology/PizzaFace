@@ -1,15 +1,10 @@
 {
-  "dependencies": {
-    "express": "^4.17.2",
-    "express-app": "^0.0.9",
-    "kaboom": "^2000.1.8"
-  },
   "name": "pizzaface",
-  "description": "My Second Application Written Through VS Code!!\r Using Javascript with KABOOMJS",
   "version": "1.0.0",
+  "description": "My Second Application Written Through VS Code!!\r Using Javascript with KABOOMJS",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -20,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Crifology/PizzaFace/issues"
   },
-  "homepage": "https://github.com/Crifology/PizzaFace#readme"
+  "homepage": "https://github.com/Crifology/PizzaFace#readme",
+  "dependencies": {
+    "express": "^4.17.2"
+  }
 }

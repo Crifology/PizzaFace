@@ -12,13 +12,13 @@ const MOVE_SPEED = 100;
 const JUMP_FORCE = 500;
 const FALL_DEATH = 700;
 
-loadSprite("pizza", "/images/pepp-pizza.png");
-loadSprite("zombie", "/images/FatZombieLeft.png");
-loadSprite("brick", "/images/Brick2.png");
-loadSprite("PizzaGuyRight", "/images/pizzaguyright.png");
-loadSprite("PizzaGuyLeft", "/images/pizzaguyleft.png");
-loadSprite("HauntingGhost", "/images/Haunting-Ghost.png");
-loadSprite("Doorway", "/images/Doorway.png");
+loadSprite("pizza", "/public/images/pepp-pizza.png");
+loadSprite("zombie", "/public/images/FatZombieLeft.png");
+loadSprite("brick", "/public/images/Brick2.png");
+loadSprite("PizzaGuyRight", "/public/images/pizzaguyright.png");
+loadSprite("PizzaGuyLeft", "/public/images/pizzaguyleft.png");
+loadSprite("HauntingGhost", "/public/images/Haunting-Ghost.png");
+loadSprite("Doorway", "/public/images/Doorway.png");
 
 scene("game", ({ level, score }) => {
   layers(["bg", "obj", "ui"], "obj");
@@ -69,7 +69,7 @@ scene("game", ({ level, score }) => {
     width: 32,
     height: 32,
     "=": [sprite("brick"), solid(), "brick"],
-    $: [sprite("pizza"), solid(), "pizza"],
+    "$": [sprite("pizza"), solid(), "pizza"],
     "#": [sprite("zombie"), solid(), "dangerous"],
     "&": [sprite("HauntingGhost"), solid(), "ghost", { dir: -1 }],
     "^": [sprite("Doorway"), "door"],

@@ -17,6 +17,11 @@
   },
   "homepage": "https://github.com/Crifology/PizzaFace#readme",
   "dependencies": {
-    "express": "^4.17.2"
-  }
+    "express": "^4.17.2",
+    "howler": "^2.2.3",
+    "kaboom": "^2000.1.8",
+    "waveform-data": "^4.3.0",
+    "webpack": "^5.65.0"
+  },
+  "keywords": []
 }

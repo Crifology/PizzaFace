@@ -20,6 +20,7 @@ loadSprite("PizzaGuyRight", "/images/PGRight.png");
 loadSprite("PizzaGuyLeft", "/images/PGLeft.png");
 loadSprite("HauntingGhost", "/images/Haunting-Ghost.png");
 loadSprite("Doorway", "/images/Doorway.png");
+loadSprite("PGJump", '/images/PGJump.png');
 
 scene("game", ({ level, score }) => {
   layers(["bg", "obj", "ui"], "obj");
@@ -65,7 +66,7 @@ scene("game", ({ level, score }) => {
       "=            &                                              ",
       "     $             #       $                                ",
       " $       =       $         ==    $          $=    $         ",
-      "=====  =====  ===== ====  ====  ==== = ===  ===  ===  ======",
+      "=====  =====  ===== ====  ====  ==== = === ====  ===  ======",
     ],
     
   ];
@@ -181,15 +182,14 @@ scene("game", ({ level, score }) => {
   });
 
   player.overlaps("door", () => {
-
     gamemusic.stop()
-  
     go("game", {
       level: level + 1,
       score: scoreLabel.value,
     });
   });
 
+  
   player.action(() => {
     camPos(player.pos);
     if (player.pos.y >= FALL_DEATH) {
@@ -200,19 +200,28 @@ scene("game", ({ level, score }) => {
 
   keyDown("left", () => {
     player.move(-MOVE_SPEED, 0);
-    player.changeSprite("PizzaGuyLeft");
-  });
+    if (player.grounded()) {
+      player.changeSprite("PizzaGuyLeft")
+    } else {
+    player.changeSprite("PGJump")
+  }});
 
   keyDown("right", () => {
     player.move(MOVE_SPEED, 0);
-    player.changeSprite("PizzaGuyRight");
-  });
+    if (player.grounded()) {
+      player.changeSprite("PizzaGuyRight")
+    } else {
+    player.changeSprite("PGJump")
+  }});
 
   keyPress("space", () => {
     if (player.grounded()) {
-      player.jump(JUMP_FORCE);
-    }
-  });
+      player.jump(JUMP_FORCE)
+    } 
+    if (player.grounded()) {
+      player.changeSprite('PGJump');
+    } 
+    });
 });
 
 scene("lose", ({ score }) => {
